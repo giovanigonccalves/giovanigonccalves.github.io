@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livros da graduação · Giovani Gonçalves</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Literata:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <a class="voltar" href="index.html">Voltar para a página inicial</a>
+    <h1>Livros</h1>
+    <p style="margin-top:1rem">Os livros que usei até agora na minha graduação.</p>
+
+    <!--
+      Para cada livro: coloque a foto da capa na pasta "imagens"
+      e ajuste src, título e autor. Copie e cole um <li> por livro.
+      Se a imagem não existir, aparece um quadro cinza no lugar.
+    -->
+    <ul class="livros">
+      <li>
+        <figure>
+          <img src="imagens/curso-de-analise.jpg" alt="Capa de Curso de Análise, volume 1"
+               onerror="this.outerHTML='<div class=&quot;sem-imagem&quot;>Adicione a capa em imagens/</div>'">
+          <figcaption>
+            <span class="titulo">Curso de Análise, vol. 1</span>
+            <span class="autor">Elon Lages Lima</span>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="imagens/algebra-linear.jpg" alt="Capa de Álgebra Linear"
+               onerror="this.outerHTML='<div class=&quot;sem-imagem&quot;>Adicione a capa em imagens/</div>'">
+          <figcaption>
+            <span class="titulo">Álgebra Linear</span>
+            <span class="autor">José Luiz Boldrini et al.</span>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="imagens/calculo-1.jpg" alt="Capa de Cálculo, volume 1"
+               onerror="this.outerHTML='<div class=&quot;sem-imagem&quot;>Adicione a capa em imagens/</div>'">
+          <figcaption>
+            <span class="titulo">Cálculo, vol. 1</span>
+            <span class="autor">James Stewart</span>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

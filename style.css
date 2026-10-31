@@ -1,0 +1,79 @@
+:root {
+  --papel: #f6f8fb;
+  --tinta: #14213d;
+  --suave: #4a5772;
+  --linha: #d7deea;
+  --destaque: #2b4acb;
+  --font-titulo: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-texto: "Literata", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papel: #0f1626;
+    --tinta: #e8edf7;
+    --suave: #a3afc7;
+    --linha: #26304a;
+    --destaque: #8fa6ff;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--tinta);
+  font: 1.05rem/1.7 var(--font-texto);
+  background-color: var(--papel);
+  /* papel quadriculado de caderno */
+  background-image:
+    linear-gradient(var(--linha) 1px, transparent 1px),
+    linear-gradient(90deg, var(--linha) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+  background: var(--papel);
+  min-height: 100vh;
+  border-left: 1px solid var(--linha);
+  border-right: 1px solid var(--linha);
+}
+h1, h2 { font-family: var(--font-titulo); line-height: 1.1; margin: 0; }
+h1 { font-size: clamp(2.6rem, 8vw, 4rem); font-weight: 800; letter-spacing: -0.03em; }
+h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; }
+.curso { color: var(--destaque); font-family: var(--font-titulo); font-size: 1.2rem; margin: .6rem 0 0; }
+.formula { color: var(--suave); font-style: italic; margin: 2rem 0 0; }
+section { margin-top: 3.5rem; }
+p { margin: 0 0 1rem; max-width: 62ch; }
+ul.interesses { padding-left: 1.2rem; margin: 0; }
+ul.interesses li { margin-bottom: .3rem; }
+a { color: var(--destaque); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--destaque); outline-offset: 3px; border-radius: 2px; }
+.link-livros {
+  display: inline-block;
+  font-family: var(--font-titulo);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.projeto { padding: 1rem 0; border-top: 1px solid var(--linha); }
+.projeto:last-child { border-bottom: 1px solid var(--linha); }
+.projeto h3 { font-family: var(--font-titulo); font-size: 1.15rem; margin: 0 0 .2rem; }
+.projeto p { margin: 0; color: var(--suave); }
+.voltar { font-family: var(--font-titulo); display: inline-block; margin-bottom: 2rem; }
+
+/* página de livros */
+.livros {
+  list-style: none; padding: 0; margin: 2.5rem 0 0;
+  display: grid; gap: 2.5rem 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+}
+.livros figure { margin: 0; }
+.livros img, .livros .sem-imagem {
+  width: 100%; aspect-ratio: 2 / 3; object-fit: cover; display: block;
+  border: 1px solid var(--linha); background: var(--linha);
+}
+.livros .sem-imagem { display: grid; place-items: center; color: var(--suave); font-size: .85rem; text-align: center; padding: .5rem; }
+.livros figcaption { margin-top: .7rem; font-size: .95rem; line-height: 1.35; }
+.livros .titulo { font-family: var(--font-titulo); font-weight: 700; display: block; }
+.livros .autor { color: var(--suave); }
