@@ -1,7 +1,0 @@
-title: "Notas de Aula e Estudos"
-description: "Meu caderno digital de matemática, notas de aula e referências."
-theme: minima
-
-# Habilita suporte a MathJax/LaTeX
-kramdown:
-  math_engine: mathjax
